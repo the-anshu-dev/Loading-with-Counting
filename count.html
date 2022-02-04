@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="count.css">
+    <title>Loading with Counting || Code Village</title>
+</head>
+<body>
+    <div class="one">You are here<span>.</span><span>.</span><span>.</span></div>
+    <div class="loading">
+        <div class="text">Completed...</div>
+        <div class="pbar">
+            <div class="p"></div>
+        </div>
+
+        <div class="percentage">100%</div>
+    </div>
+
+
+    <!-- now add JS -->
+    <script>
+
+        var percentage=document.querySelector('.percentage');
+        var p=document.querySelector('.p');
+
+
+        var text=document.querySelector('.text');
+
+        var count=4;
+        var per=16;
+        var loading=setInterval(animate,50);
+        function animate()
+        {
+            if(count==100 && per==400)
+            {
+                percentage.classList.add("textblink");
+                text.style.display="block";
+                clearInterval(loading);
+            }
+            else
+            {
+                per=per+4;
+                count++;
+                p.style.width=per + 'px';
+                percentage.textContent=count+'%';
+            }
+        }
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+html
+{
+    height: 100%;
+}
+body
+{
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.one
+{
+    color: #ff3753;
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 80px;
+    content: 'Completed';
+    display: block;
+
+}
+
+span:nth-child(1)
+{
+    animation: sp 1s infinite;
+    transition-delay: 0.5s;
+}
+@keyframes sp
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+span:nth-child(2)
+{
+    animation: sp1 1s infinite;
+    transition-delay: 0.10s;
+}
+@keyframes sp1
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+span:nth-child(3)
+{
+    animation: sp3 1s infinite;
+    transition-delay: 0.15s;
+}
+@keyframes sp3
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+.loading
+{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.percentage
+{
+    color: #999;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 5px;
+
+}
+
+.text
+{
+    position: absolute;
+    left: 160px;
+    color: #64d6df;
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 21px;
+    display: none;
+}
+
+.textblink
+{
+    animation: ani .7s ease-in-out .1s;
+}
+@keyframes ani 
+{
+    0%
+    {
+        opacity: .1;
+    }
+   50%
+   {
+       opacity: 0.5;
+   }
+   100%
+   {
+       opacity: 1;
+   }
+}
+
+
+
+.pbar
+{
+    width: 406px;
+    height: 20px;
+    background: #fff;
+    border-radius: 13px;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.p
+{
+    width: 200px;
+    height: 15px;
+    background: #222;
+    border-radius: 13px;
+}
